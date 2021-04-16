@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Items</h1>
+<input type="hidden" class="auth-token" value="" />
+<form class="form-group" id="frm-search-item">
+    <select class="select-store">
+    </select>
+</form>
+
+<table id="itemTable" border="1" class="table table-condensed">
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>Tienda</td>
+        <td>Nombre</td>
+        <td>Precio</td>
+        <td>Acción</td>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+</table>
+<div class="item-container">
+    <ul class="item-list">
+
+    </ul>
+</div>
+<br>
+<br>
+<form class="form-group" id="frm-add-item">
+    <input type="hidden" id="item-input-id" name="item-input-id" class="item-input-id">
+    <label>Nombre Item:</label><input type="text" class="item-input-name" name="item-input-name"/><br>
+    <label>Precio Item:</label><input type="text" class="item-input-price" name="item-input-price"/><br>
+    <button type="submit" class="add-item-button">Agregar item</button>
+     <button type="submit" class="update-item-button">Actualizar Item</button>
+</form>
+
+{% endblock %}
+{% block js %}{{ url_for('static', filename='item.js') }}{% endblock %}
