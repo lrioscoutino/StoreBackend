@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Stores</h1>
+<input type="hidden" class="auth-token" value="" />
+<form class="form-group" id="frm-search-store">
+    <input type="text" class="store-input" />
+    <button type="submit" class="search-store-button">Buscar Store</button>
+</form>
+<table id="storeTable" border="1" class="table table-condensed">
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>Nombre</td>
+        <td>Dirección</td>
+        <td>Telefóno</td>
+        <td>Productos</td>
+        <td>Acción</td>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+</table>
+<br>
+<br>
+<form class="form-group" id="frm-add-store">
+    <legend>Agrega una Tienda</legend>
+    <input type="hidden" name="store-input-id" class="store-input-id" id="store-input-name">
+    <label>Nombre Tienda:</label><input type="text" class="store-input-name" name="store-input-name"/><br>
+    <label>Dirección Tienda:</label><input type="text" class="store-input-address" name="store-input-address"/><br>
+    <label>Teléfono Tienda:</label><input type="text" class="store-input-phone" name="store-input-phone"/><br>
+    <button type="submit" class="add-store-button">Guardar Store</button>
+    <button type="submit" class="update-store-button">Actualizar Store</button>
+</form>
+{% endblock %}
+
+{% block js %}{{ url_for('static', filename='store.js') }}{% endblock %}
+

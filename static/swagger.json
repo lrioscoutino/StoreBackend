@@ -1,0 +1,31 @@
+{
+  "definitions": {},
+  "info": {
+    "title": "Store and Items",
+    "version": "1.0.0"
+  },"tags": [
+    {
+      "name": "Store Request",
+      "description": "Example API for requesting and return Store requests"
+    }
+  ],
+  "paths": {
+    "/stores": {
+      "get": {
+        "tags": [
+          "Store Request"
+        ],
+        "summary": "Returns StoreRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/stores"
+            }
+          }
+        }
+      }
+    }
+  },
+  "swagger": "2.0"
+}
